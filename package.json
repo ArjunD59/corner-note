@@ -1,0 +1,47 @@
+{
+  "name": "corner-note",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Arjun Dharanikumar",
+  "license": "ISC",
+  "description": "A tiny always-on-top sticky note for your screen corner.",
+  "devDependencies": {
+    "electron": "^37.1.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.arjund.cornernote",
+    "productName": "Corner Note",
+    "files": [
+      "index.html",
+      "index.js",
+      "preload.js",
+      "renderer.js",
+      "storage.js",
+      "package.json"
+    ],
+    "mac": {
+      "icon": "icon.icns",
+      "category": "public.app-category.productivity",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ]
+    },
+    "win": {
+      "icon": "icon.ico",
+      "target": "nsis"
+    },
+    "artifactName": "Corner-Note-${version}-${arch}.${ext}"
+  }
+}

@@ -1,0 +1,34 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Corner Note</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #fff9a1; /* Sticky note yellow */
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      resize: none;
+      font-size: 16px;
+      padding: 10px;
+      box-sizing: border-box;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <textarea id="note" placeholder="Type your notes here..."></textarea>
+  <script src="renderer.js"></script>
+</body>
+</html>
